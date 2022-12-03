@@ -1,11 +1,17 @@
+CC=g++ 
+CFLAGS=-std=c++20 -lfmt -Wall -fmessage-length=60 -fdiagnostics-color=always
+
 part1 :
-	@g++ src/shared.cpp src/part1.cpp -o main -std=c++20 -lfmt -Wall
+	@ $(CC)$(CFLAGS) src/shared.cpp src/part1.cpp -o main 
 
 part2 :
-	@g++ src/shared.cpp src/part2.cpp -o main -std=c++20 -lfmt -Wall
+	@ $(CC)$(CFLAGS) src/shared.cpp src/part2.cpp -o main
 
 run :
-	@cat input.txt | ./main
+	@ cat input.txt | ./main
 
 test : 
-	@cat test.txt | ./main
+	@ cat test.txt | ./main
+
+clean : 
+	@ rm main
