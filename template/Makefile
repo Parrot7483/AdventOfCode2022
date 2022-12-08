@@ -1,5 +1,5 @@
 CC=g++ 
-CFLAGS=-std=c++20 -lfmt -Wall -fmessage-length=60 -fdiagnostics-color=always
+CFLAGS=-std=c++20 -lfmt -Wall -fdiagnostics-color=always
 
 part1 :
 	@ $(CC)$(CFLAGS) src/shared.cpp src/part1.cpp -o main 
